@@ -22,7 +22,14 @@ export class ListaPersonagensComponent implements OnInit {
       this.personagens = [ 
         { nome: 'Jhon', descricao: 'personagem principal do livro', idade: 32 },
         { nome: 'Marcia', descricao: 'par romântico de Jhon', idade: 27 },
-        { nome: 'Emerson', descricao: 'melhor amigo de Jhon', idade: 39 }
+        { nome: 'Emerson', descricao: 'melhor amigo de Jhon', idade: 39 },
+        { nome: 'Gabriel', descricao: `Lorem ipsum dolor sit amet, 
+                                        consectetur adipiscing elit. Ut sed libero erat.
+                                        Aliquam pretium eros fringilla gravida laoreet.
+                                        Aliquam vulputate dapibus ornare. 
+                                        Ut tincidunt rutrum auctor. Nullam id felis justo.
+                                        Proin et erat aliquet, faucibus erat nec, auctor mi.
+                                        Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at.`, idade: 29 }  
       ]
 
     });
