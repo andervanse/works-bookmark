@@ -1,0 +1,8 @@
+.page-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    align-items: center;
+}
