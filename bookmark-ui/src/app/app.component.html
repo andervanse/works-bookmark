@@ -4,7 +4,7 @@
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">
-          <a class="mdl-layout-title mdl-navigation__link" routerLink="home">Bookmark</a>
+        <a class="mdl-navigation__link" routerLink="home">Home</a>
       </span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
@@ -15,11 +15,15 @@
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Bookmark</span>
+  <div class="mdl-layout__drawer" #leftMenu>
+    <span class="mdl-layout-title">
+      <a class="mdl-navigation__link" routerLink="home" (click)="onClickCloseMenu()">
+        Home
+      </a>  
+    </span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" routerLink="livros">Meus Livros</a>
-      <a class="mdl-navigation__link" routerLink="sobre">Sobre</a>
+      <a class="mdl-navigation__link" routerLink="livros" (click)="onClickCloseMenu()">Meus Livros</a>
+      <a class="mdl-navigation__link" routerLink="sobre" (click)="onClickCloseMenu()">Sobre</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
