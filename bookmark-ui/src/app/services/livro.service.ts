@@ -31,20 +31,19 @@ export class LivroService {
 
     obterLivro(livroId: string): Observable<Livro> {
 
-        if (!isNullOrUndefined(this.livros)) {
-            let livro = this.livros.find((l) => l.id === livroId);
-
-            if (livro.personagens) {
-                for (let i = 0; i < livro.personagens.length; i++) {
-                    if (livro.personagens[i].imagemUrl === null) {
-                        livro.personagens[i].imagemUrl = './assets/img/no-image.png';
-                    }
-                }
-            }
-            return of(livro);
-        }
-        
-        else return of(null);
+        return this.http.get<Livro>(`${environment.ApiBaseUrl}/assets/mock-data.json`)
+            .pipe(
+                map((resp: Livro[]) => {
+                    resp.forEach(element => {
+                        if (isNullOrUndefined(element.imagemUrl)) {
+                            element.imagemUrl = './assets/img/no-image.png';
+                        }
+                    });                    
+                    this.livros = resp;  
+                    let l = resp.find((l) => { return l.id == livroId });
+                    return l;
+                })
+            );
     }
 
     salvarLivro(usuario: Usuario, livro: Livro): Observable<Livro[]> {

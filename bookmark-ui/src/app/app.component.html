@@ -12,6 +12,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" [routerLink]="['/editar-livro', 0]" (click)="onClickCloseMenu()">Novo Livro</a>        
         <a class="mdl-navigation__link" routerLink="livros">Meus Livros</a>        
         <a class="mdl-navigation__link" routerLink="sobre">Sobre</a>
       </nav>
@@ -24,6 +25,7 @@
       </a>  
     </span>
     <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" [routerLink]="['/editar-livro', 0]" (click)="onClickCloseMenu()">Novo Livro</a>
       <a class="mdl-navigation__link" routerLink="livros" (click)="onClickCloseMenu()">Meus Livros</a>
       <a class="mdl-navigation__link" routerLink="sobre" (click)="onClickCloseMenu()">Sobre</a>
     </nav>

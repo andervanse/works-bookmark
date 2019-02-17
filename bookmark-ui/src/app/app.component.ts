@@ -16,6 +16,5 @@ export class AppComponent {
   onClickCloseMenu() {
     this.leftMenu.nativeElement.classList.remove('is-visible');
     document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
-    //this.router.navigate([link]);
   }
 }

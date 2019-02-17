@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { TreeChartPersonagensComponent } from './components/tree-chart-personagens/tree-chart-personagens.component';
 import { LivroService } from './services/livro.service';
 import { UsuarioService } from './services/usuario.service';
+import { EditarLivroComponent } from './components/editar-livro/editar-livro.component';
 
 const appRoutes :Route[] = [
   { path: 'home', redirectTo: '', pathMatch: 'prefix' },
@@ -22,7 +23,8 @@ const appRoutes :Route[] = [
   { path: 'sobre', component: SobreComponent }, 
   { path: 'livros', component: ListaLivrosComponent },
   { path: 'livro/:livro/personagens', component: ListaPersonagensComponent },  
-  { path: 'livro/:livro/chart-personagens', component: TreeChartPersonagensComponent }  
+  { path: 'livro/:livro/chart-personagens', component: TreeChartPersonagensComponent },
+  { path: 'editar-livro/:livro', component: EditarLivroComponent }  
 ]
 
 @NgModule({ 
@@ -32,7 +34,8 @@ const appRoutes :Route[] = [
     ListaPersonagensComponent,
     HomeComponent, 
     SobreComponent,
-    TreeChartPersonagensComponent
+    TreeChartPersonagensComponent,
+    EditarLivroComponent
   ],
   imports: [  
     BrowserModule,

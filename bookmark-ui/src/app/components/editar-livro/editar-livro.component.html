@@ -1,0 +1,30 @@
+<div class="dialog" [ngStyle]="{'visibility' : showModal}">
+  <h4 class="mdl-dialog__title">Novo Livro</h4>
+  <form #livroForm="ngForm" (ngSubmit)="onSubmit(livroForm)" action="#" novalidate autocomplete="off">
+    <div class="mdl-dialog__content">
+      <input type="hidden" ngModel name="id">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" ngModel name="titulo" maxlength="60" minlength="5" required>
+        <label class="mdl-textfield__label" for="titulo">Título...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" ngModel name="descricao" maxlength="60">
+        <label class="mdl-textfield__label" for="descricao">Descrição...</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <div class="fileinputs" id="file-upload">
+          <input type="file" class="file" accept="image/*" (change)="imageUpload($event)" #fileinput />
+          <div class="fakefile">
+            <img src="../../../assets/icons/icon-upload-32x32.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="submit" class="mdl-button">Salvar</button>
+      <button type="button" class="mdl-button" [routerLink]="['/livros']">Voltar</button>
+    </div>
+  </form>
+</div>

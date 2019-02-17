@@ -9,6 +9,7 @@ export class TreeDiagramNode {
   private _toggle: boolean;
   public children: Set<string>;
   public displayName: string;
+  public isMaker: boolean;
   public dataObject: any;
 
   constructor (props, config, public getThisNodeList: () => TreeDiagramNodesList) {

@@ -17,7 +17,8 @@ export class TreeChartPersonagensComponent implements OnInit {
   livroSelecionado: Livro;
   descricaoPersonagem: string;
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private usuarioService: UsuarioService,
     private nodelstService: NodesListService,
     private livroService: LivroService) { }

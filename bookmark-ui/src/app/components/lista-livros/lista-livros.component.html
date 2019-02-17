@@ -1,65 +1,24 @@
-<br>
-<div class="center">
-  <button class="mdl-button mdl-js-button mdl-button--raised" (click)="onAdicionarLivro()">
-    Adicionar livro
-  </button>
-</div>
-<br>
+<div class="demo-card-square mdl-card mdl-shadow--2dp" *ngFor="let livro of livros">
 
-<section>
-  <dialog class="mdl-dialog" #dialog>
-    <h4 class="mdl-dialog__title">Novo Livro</h4>
-    <form #livroForm="ngForm" (ngSubmit)="onSubmit(livroForm)" action="#" novalidate autocomplete="off">
-      <div class="mdl-dialog__content">
-        <input type="hidden" ngModel name="id">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" ngModel name="titulo" maxlength="60" minlength="5" required>
-          <label class="mdl-textfield__label" for="titulo">Título...</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" ngModel name="descricao" maxlength="60">
-          <label class="mdl-textfield__label" for="descricao">Descrição...</label>
-        </div>
-
-        <div class="mdl-textfield mdl-js-textfield">            
-            <div class="fileinputs" id="file-upload">                
-                <input type="file" class="file" accept="image/*" (change)="imageUpload($event)" #fileinput/>
-                <div class="fakefile">             
-                  <img src="../../../assets/icons/icon-upload-32x32.png" />
-                </div>
-            </div>
-        </div>        
-
-      </div>
-      <div class="mdl-dialog__actions">
-        <button type="submit" class="mdl-button">Salvar</button>
-        <button type="button" class="mdl-button close" (click)="onCloseModal()">Fechar</button>
-      </div>
-    </form>
-  </dialog>
-</section>
-
-<section>
-  <div class="demo-card-square mdl-card mdl-shadow--2dp" *ngFor="let livro of livros">
-
-    <div class="mdl-card__title mdl-card--expand center">
-      <img [src]="livro.imagemUrl" width="100px;" height="100px;">
-    </div>
-
-    <div class="mdl-card__supporting-text">
-      <h6>{{ livro.titulo }}</h6>
-    </div>
-
-    <div class="mdl-card__actions mdl-card--border center">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-          [routerLink]="['/livro', livro.id, 'chart-personagens']">
-          Personagens
-        </a>      
-    </div>    
-    <div class="mdl-card__actions mdl-card--border center">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="onEditarLivro(livro)">Editar</a> 
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="onExcluirLivro(livro)">Excluir</a>
-    </div>
-
+  <div class="mdl-card__title mdl-card--expand center">
+    <img [src]="livro.imagemUrl" width="100px;" height="100px;">
   </div>
-</section>
+
+  <div class="mdl-card__supporting-text">
+    <h6>{{ livro.titulo }}</h6>
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border center">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+      [routerLink]="['/livro', livro.id, 'chart-personagens']">
+      Personagens
+    </a>
+  </div>
+  <div class="mdl-card__actions mdl-card--border center">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+       [routerLink]="['/editar-livro', livro.id]">Editar</a>
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+      (click)="onExcluirLivro(livro)">Excluir</a>
+  </div>
+
+</div>
