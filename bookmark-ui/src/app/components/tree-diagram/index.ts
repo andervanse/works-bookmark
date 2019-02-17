@@ -1,1 +1,1 @@
-export {TreeDiagram} from './tree.module'
+export {TreeDiagram} from './tree.module';

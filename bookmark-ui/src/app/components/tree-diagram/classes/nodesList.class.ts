@@ -6,7 +6,7 @@ export class TreeDiagramNodesList {
   public makerGuid: string;
   public draggingNodeGuid;
   private _nodeTemplate = {
-    displayName: 'New node',
+    displayName: 'Editar',
     children: [],
     guid: '',
     parentId: null
@@ -30,7 +30,7 @@ export class TreeDiagramNodesList {
       guid: this.makerGuid,
       parentId: 'root',
       children: [],
-      displayName: 'New node'
+      displayName: 'Novo'
     }
     let maker = new TreeDiagramNodeMaker(node, this.config, this.getThisNodeList.bind(this))
     this._nodesList.set(this.makerGuid, maker)

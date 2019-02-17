@@ -120,18 +120,34 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border-radius: 2px;
-  background-color: #a34851;
+  border-radius: 50px;
+  background-color: white;
+  border: 1px solid black;
   position: absolute;
   right: -10px;
   top: -10px;
 }
+
+.buttons .delete:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #ca8883;
+}
+
 .buttons .add {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border-radius: 2px;
-  background-color: #256947;
+  border-radius: 50px;
+  background-color: white;
+  border: 1px solid black;
   position: absolute;
   right: -10px;
   bottom: -10px;
@@ -196,7 +212,7 @@
 }
 .tree-new-node .rect {
   opacity: 0.5;
-  border: 1px dashed #b30606;
+  border: 1px dotted #75490f81;
   cursor: pointer !important;
 }
 .tree-new-node:hover .rect, .tree-new-node.dragover .rect {

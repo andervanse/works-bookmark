@@ -1,12 +1,13 @@
 :host {
   -webkit-print-color-adjust: exact;
   position: relative;
-  display: block;
+  
   -webkit-touch-callout: none;
   user-select: none;
   overflow: hidden;
   height: 100vh;
   text-align: center;
+  width: 100%;
 }
 .tree-roots-elements {
   position: relative;

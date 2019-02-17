@@ -11,6 +11,7 @@
 
             <div [treeDiagramNode]="node.guid"
                  class="tree-root tree-node"
+                 (nodeSelected)="onNodeSelected($event)"
                  (mousedown)="preventMouse($event)"
                  *ngFor="let node of nodes.roots">                 
             </div>

@@ -2,8 +2,33 @@
 
 .demo-card-square {
     margin: 5px;   
+    width: 230px;
 }
 
-.center {
-    margin: auto;
+dialog {
+    width: 80%;
+}
+
+.mdl-js-textfield {
+    width: 80%;
+}
+
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+input.file {
+	position: relative;
+    text-align: right;
+    filter:alpha(opacity 0);
+    width:60px;
+    opacity: 0;
+	z-index: 2;
 }

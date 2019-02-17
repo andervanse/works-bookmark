@@ -1,0 +1,79 @@
+[
+    {
+        "id": "L0001",
+        "usuario": {
+            "id": "1",
+            "nome": "usuario"
+        },
+        "titulo": "teste",
+        "descricao": "livro 0001",
+        "personagens": [
+            {
+                "id": "P0001",
+                "nome": "Jhon",
+                "idade": 32,
+                "descricao": "personagem principal do livro",
+                "personagemsFilhos": [ { "id": "P0003", "nome":"José" } ]
+            },
+            {
+                "id": "P0002",
+                "nome": "Marcia",
+                "idade": 27,
+                "descricao": "par romântico de Jhon"
+            },
+            {
+                "id": "P0003",
+                "nome": "José",
+                "idade": 12,
+                "descricao": "Filho de Jhon",
+                "personagemPai": { "id": "P0001", "nome":"Jhon" }
+            }
+        ]
+    },
+    {
+        "id": "L0002",
+        "usuario": {
+            "id": "1",
+            "nome": "usuario"
+        },
+        "titulo": "teste livro 2",
+        "descricao": "livro 0002",
+        "personagens": [
+            {
+                "id": "P0001",
+                "nome": "Jhon",
+                "idade": 32,
+                "descricao": "personagem principal do livro"                
+            },
+            {
+                "id": "P0002",
+                "nome": "Gabriel",
+                "idade": 29,
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at."                
+            }
+        ]
+    },
+    {
+        "id": "L0003",
+        "usuario": {
+            "id": "1",
+            "nome": "usuario"
+        },
+        "titulo": "teste livro 3",
+        "descricao": "livro 0003",
+        "personagens": [
+            {
+                "id": "P0001",
+                "nome": "Jhon",
+                "idade": 32,
+                "descricao": "personagem principal do livro"                
+            },
+            {
+                "id": "P0002",
+                "nome": "Rafael",
+                "idade": 51,
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at."                
+            }
+        ]
+    }
+]

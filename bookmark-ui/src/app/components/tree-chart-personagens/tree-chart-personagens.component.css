@@ -1,4 +1,17 @@
 
-.tree-paning-container {
+.main {
+    
+    text-align: center;
+}
+
+div.middle {
+    height: 30%;
     position: relative;
+}
+
+.descricao {
+    position: fixed;
+    bottom: 0;
+  
+    width: 100%;    
 }

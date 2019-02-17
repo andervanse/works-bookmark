@@ -5,7 +5,7 @@ export class TreeDiagramNodeMaker extends TreeDiagramNode{
     event.preventDefault();
     let guid = this.getThisNodeList().draggingNodeGuid
     this.getThisNodeList().rootNode(guid);
-    this.displayName = 'New node'
+    this.displayName = 'Novo'
     return false;
   }
 
@@ -30,7 +30,7 @@ export class TreeDiagramNodeMaker extends TreeDiagramNode{
   }
 
   public dragleave (event) {
-    this.displayName = 'New node'
+    this.displayName = 'Novo'
     this.isDragover = false;
   }
 }

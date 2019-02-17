@@ -20,27 +20,28 @@
          (dragstart)="node.dragstart($event)"
          (dragover)="node.dragover($event)"
          (dragend)="node.dragend($event)"
-         (dragleave)="node.dragleave($event)"
-    >
-        <div class="rect"
+         (dragleave)="node.dragleave($event)">
+
+        <div class="rect"             
+             (click)="onNodeSelected($event)"
              [style.width.px]="node.width"
-             [style.height.px]="node.height"
-        >
+             [style.height.px]="node.height">
+
             <div class="buttons">
                 <div class="delete" (click)="node.destroy()"></div>
                 <div class="toggler"
-                     (click)="node.toggle()"
-                ></div>
+                     (click)="node.toggle()"></div>
                 <div class="add" (click)="node.addChild()"></div>
             </div>
             <div class="tree-text tree-text-non-editable">
-                <span>{{node.displayName}}</span>
+                <span>{{ node.displayName }}</span>
             </div>
             <div class="tree-text tree-text-editable">
                 <span #disaplyName contenteditable [innerHtml]="node.displayName" (blur)="node.displayName=$event.srcElement.innerText"></span>
-                <span class="children-count"> ({{node.childrenCount()}})</span>
+                <span class="children-count"> ({{ node.childrenCount() }})</span>
             </div>
         </div>
+
     </div>
     <div class="tree-children"
          [style.transform]="childrenTransform"

@@ -1,2 +1,15 @@
+<div class="main">
+  <div class="center">
+    <h4><i>{{ livroSelecionado?.titulo }}</i></h4>
+  </div>
 
+  <div class="middle">
+    <tree-diagram [data]="dataset" (nodeSelected)="onNodeSelected($event)"></tree-diagram>
+  </div>
+
+  <div class="descricao">
+    <h5>{{ descricaoPersonagem }}</h5>
+  </div>
+
+</div>
 

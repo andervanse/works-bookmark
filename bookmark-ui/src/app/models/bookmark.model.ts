@@ -1,15 +1,33 @@
-
+export class Usuario {
+    id: string;
+    nome: string;
+    livros?: Livro[];
+}
 
 export class Livro {
-    id:number;
-    titulo:string;
-    imagemUrl:string;
-    descricao:string;
-    personagens:Personagem[];
+    id: string;
+    usuario: Usuario;
+    titulo: string;
+    imagemUrl?: string;
+    descricao?: string;
+    personagens?: Personagem[];
 }
 
 export class Personagem {
-    nome:string;
-    idade:number;
-    descricao:string;
+    id: string;
+    nome: string;
+    idade: number;
+    descricao: string;
+    imagemUrl?: string;
+    personagemPai?: Personagem;
+    personagemsFilhos?: Personagem[];
 }
+
+export class PersonagemNode {
+    displayName: string;
+    children: string[];
+    guid: string;
+    parentId?: string;
+    dataObject: any;
+}
+
