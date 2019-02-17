@@ -13,20 +13,96 @@
                 "nome": "Jhon",
                 "idade": 32,
                 "descricao": "personagem principal do livro",
-                "personagemsFilhos": [ { "id": "P0003", "nome":"José" } ]
+                "personagemsFilhos": [
+                    {
+                        "id": "P0003"
+                    },
+                    {
+                        "id": "P0007"
+                    }
+                ]
             },
             {
                 "id": "P0002",
                 "nome": "Marcia",
                 "idade": 27,
-                "descricao": "par romântico de Jhon"
+                "descricao": "par romântico de Jhon",
+                "personagemsFilhos": [
+                    {
+                        "id": "P0004"
+                    }
+                ]
             },
             {
                 "id": "P0003",
                 "nome": "José",
                 "idade": 12,
                 "descricao": "Filho de Jhon",
-                "personagemPai": { "id": "P0001", "nome":"Jhon" }
+                "personagemPai": {
+                    "id": "P0001"
+                }
+            },
+            {
+                "id": "P0004",
+                "nome": "Marcela",
+                "idade": 33,
+                "descricao": "Irmã mais velha de Marcia",
+                "personagemPai": {
+                    "id": "P0002"
+                },
+                "personagemsFilhos": [
+                    {
+                        "id": "P0005"
+                    }
+                ]
+            },
+            {
+                "id": "P0005",
+                "nome": "Carlos",
+                "idade": 20,
+                "descricao": "Filho de Marcela",
+                "personagemPai": {
+                    "id": "P0004"
+                },
+                "personagemsFilhos": [
+                    {
+                        "id": "P0006"
+                    }
+                ]
+            },
+            {
+                "id": "P0006",
+                "nome": "Marcio",
+                "idade": 20,
+                "descricao": "Melhor amigo de Carlos",
+                "personagemPai": {
+                    "id": "P0005"
+                },
+                "personagemsFilhos": []
+            },
+            {
+                "id": "P0007",
+                "nome": "Bruno",
+                "idade": 47,
+                "descricao": "Chefe de Jhon",
+                "personagemPai": {
+                    "id": "P0001"
+                },
+                "personagemsFilhos": [
+                    {
+                        "id": "P0008"
+                    }
+                ]
+            },
+            {
+                "id": "P0008",
+                "nome": "João",
+                "idade": 41,
+                "descricao": "Colega de trabalho de Bruno",
+                "personagemPai": {
+                    "id": "P0007"
+                },
+                "personagemsFilhos": []
             }
         ]
     },
@@ -41,16 +117,85 @@
         "personagens": [
             {
                 "id": "P0001",
-                "nome": "Jhon",
+                "nome": "Maria",
                 "idade": 32,
-                "descricao": "personagem principal do livro"                
+                "descricao": "personagem principal do livro",
+                "personagemsFilhos": [
+                    {
+                        "id": "P0003"
+                    },
+                    {
+                        "id": "P0004"
+                    },
+                    {
+                        "id": "P0005"
+                    }
+                ]
             },
             {
                 "id": "P0002",
                 "nome": "Gabriel",
                 "idade": 29,
-                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at."                
-            }
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at.",
+                "personagemsFilhos": []
+            },
+            {
+                "id": "P0003",
+                "nome": "Joana",
+                "idade": 34,
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. eget scelerisque eros tincidunt at.",
+                "personagemsFilhos": [],
+                "personagemPai": {
+                    "id": "P0001"
+                }
+            },
+            {
+                "id": "P0004",
+                "nome": "Marcelo",
+                "idade": 31,
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat.",
+                "personagemsFilhos": [],
+                "personagemPai": {
+                    "id": "P0001"
+                }
+            },
+            {
+                "id": "P0005",
+                "nome": "Ana",
+                "idade": 37,
+                "descricao": "Lorem ipsum dolor sit amet, Ut sed libero erat.",
+                "personagemsFilhos": [
+                    {
+                        "id": "P0006"
+                    },
+                    {
+                        "id": "P0007"
+                    }
+                ],
+                "personagemPai": {
+                    "id": "P0001"
+                }
+            },
+            {
+                "id": "P0006",
+                "nome": "Ezequiel",
+                "idade": 27,
+                "descricao": "Lorem ipsum dolor sit amet.",
+                "personagemsFilhos": [],
+                "personagemPai": {
+                    "id": "P0005"
+                }
+            },
+            {
+                "id": "P0007",
+                "nome": "Cristina",
+                "idade": 29,
+                "descricao": "Ut sed libero erat.",
+                "personagemsFilhos": [],
+                "personagemPai": {
+                    "id": "P0005"
+                }
+            }            
         ]
     },
     {
@@ -66,13 +211,13 @@
                 "id": "P0001",
                 "nome": "Jhon",
                 "idade": 32,
-                "descricao": "personagem principal do livro"                
+                "descricao": "personagem principal do livro"
             },
             {
                 "id": "P0002",
                 "nome": "Rafael",
                 "idade": 51,
-                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at."                
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed libero erat. Proin venenatis scelerisque metus, eget scelerisque eros tincidunt at."
             }
         ]
     }
