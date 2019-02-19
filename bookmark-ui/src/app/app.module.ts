@@ -4,6 +4,8 @@ import { Route, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularDraggableModule } from 'angular2-draggable';
+
 import { TreeDiagram } from './components/tree-diagram';
 import { AppComponent } from './app.component';
 import { ListaLivrosComponent } from './components/lista-livros/lista-livros.component';
@@ -42,6 +44,7 @@ const appRoutes :Route[] = [
     FormsModule,
     TreeDiagram,
     HttpClientModule,
+    AngularDraggableModule,
     RouterModule.forRoot(appRoutes, { useHash: true }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

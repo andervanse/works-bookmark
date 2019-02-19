@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.mdl-card--expand {
+    flex-grow: 1; 
+   flex-direction: inherit;
+}
+
 .demo-card-square {
     display: inline-block;
     margin: 5px;   

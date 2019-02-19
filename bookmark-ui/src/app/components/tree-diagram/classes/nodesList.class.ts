@@ -20,11 +20,13 @@ export class TreeDiagramNodesList {
   }
 
   constructor (_nodes: any[], private config) {
-    _nodes.forEach(_node => {
-      this._nodesList.set(_node.guid, new TreeDiagramNode(_node, config, this.getThisNodeList.bind(this)))
-    });
-    this._makeRoots()
 
+    _nodes.forEach((_node) => {
+        this._nodesList.set(_node.guid, new TreeDiagramNode(_node, config, this.getThisNodeList.bind(this)))
+    });
+
+    this._makeRoots()    
+    
     this.makerGuid = this.uuidv4()
     let node = {
       guid: this.makerGuid,
@@ -32,8 +34,9 @@ export class TreeDiagramNodesList {
       children: [],
       displayName: 'Novo'
     }
+        
     let maker = new TreeDiagramNodeMaker(node, this.config, this.getThisNodeList.bind(this))
-    this._nodesList.set(this.makerGuid, maker)
+    this._nodesList.set(this.makerGuid, maker)    
   }
 
   private _makeRoots () {

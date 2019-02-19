@@ -39,7 +39,7 @@ export class TreeChartPersonagensComponent implements OnInit {
               json: nodes,
               config: {
                 nodeWidth: 100,
-                nodeHeight: 70
+                nodeHeight: 60
               }
             }
           }

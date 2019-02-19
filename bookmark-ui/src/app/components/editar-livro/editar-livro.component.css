@@ -18,6 +18,11 @@ div.fakefile {
 }
 
 input.file {
+	height: 40px;
+	max-width: 80px;
+}
+
+input.file {
 	position: relative;
     text-align: right;
     filter:alpha(opacity 0);

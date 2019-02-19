@@ -1,17 +1,18 @@
+:host{
+    height: 100%;
+}
 
 .main {
-    
+    height: 100%;
     text-align: center;
 }
 
 div.middle {
-    height: 30%;
+    height: 100%;
     position: relative;
 }
 
 .descricao {
-    position: fixed;
-    bottom: 0;
-  
-    width: 100%;    
+    position: absolute;
+    bottom: 0;  
 }

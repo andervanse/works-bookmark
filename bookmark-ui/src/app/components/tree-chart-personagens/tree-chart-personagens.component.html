@@ -1,14 +1,11 @@
 <div class="main">
   <div class="center">
-    <h4><i>{{ livroSelecionado?.titulo }}</i></h4>
+    <h6><i>{{ livroSelecionado?.titulo }}</i></h6>
+    <p>{{ descricaoPersonagem }}</p>
   </div>
 
-  <div class="middle">
+  <div class="middle" ngDraggable>
     <tree-diagram [data]="dataset" (nodeSelected)="onNodeSelected($event)"></tree-diagram>
-  </div>
-
-  <div class="descricao">
-    <h5>{{ descricaoPersonagem }}</h5>
   </div>
 
 </div>

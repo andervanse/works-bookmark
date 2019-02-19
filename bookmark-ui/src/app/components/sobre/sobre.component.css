@@ -1,0 +1,17 @@
+p {
+    font-size: 16px;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: green;
+    text-decoration: none;    
+}
+
+a:active {
+    color: blue;
+}

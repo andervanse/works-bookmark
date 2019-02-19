@@ -214,6 +214,8 @@
   opacity: 0.5;
   border: 1px dotted #75490f81;
   cursor: pointer !important;
+  display: none;
+  visibility: hidden;
 }
 .tree-new-node:hover .rect, .tree-new-node.dragover .rect {
   opacity: 1;

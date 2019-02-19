@@ -1,8 +1,8 @@
 {
   "name": "bookmark",
   "short_name": "bookmark",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#795548",
+  "background_color": "#795548",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

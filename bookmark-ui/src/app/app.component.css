@@ -5,4 +5,12 @@
     width: 60%;
     padding: 10px;
     align-items: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .page-content {
+        width: 86%;
+    }
+	
 }
