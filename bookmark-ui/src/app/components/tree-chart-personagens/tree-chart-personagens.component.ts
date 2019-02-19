@@ -38,8 +38,8 @@ export class TreeChartPersonagensComponent implements OnInit {
             this.dataset = {
               json: nodes,
               config: {
-                nodeWidth: 100,
-                nodeHeight: 60
+                nodeWidth: 64,
+                nodeHeight: 64
               }
             }
           }

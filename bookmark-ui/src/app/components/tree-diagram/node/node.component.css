@@ -25,9 +25,8 @@
   display: inline-block;
 }
 .rect {
-  position: relative;
-  background-color: #fafafa !important;
-  border: 1px solid black;
+  position: relative;  
+  border: transparent;
   box-sizing: border-box;
   -webkit-print-color-adjust: exact;
   cursor: default !important;
@@ -35,18 +34,17 @@
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  border-radius: 2px;
+  border-radius: 50%;
 }
 .tree-element-main {
   text-align: center;
   margin: 0 auto;
+  border-radius: 50%;
 }
 .tree-element-main:hover .buttons {
   display: block;
 }
-.tree-element-main.expanded .rect {
-  background-color: #bce5ff !important;
-}
+
 .tree-element-main.expanded .toggler {
   transform: rotateZ(-45deg);
   background: #427396;
@@ -91,7 +89,7 @@
 }
 .tree-node {
   position: relative;
-  border: 1px black solid;
+  border: transparent;
   display: inline-block;
   margin: 15px;
   vertical-align: top;
@@ -181,6 +179,8 @@
 }
 .tree-text span {
   cursor: pointer;
+  position: relative;
+  top: 48px;
 }
 .tree-elements-group {
   position: relative;

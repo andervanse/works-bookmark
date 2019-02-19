@@ -25,8 +25,11 @@
         <div class="rect"             
              (click)="onNodeSelected($event)"
              [style.width.px]="node.width"
-             [style.height.px]="node.height">
-
+             [style.height.px]="node.height"
+             [style.background-size]="cover"
+             [style.background-position]="center"
+             [style.background-repeat]="no-repeat"
+             [style.background-image] = "'url('+'../assets/img/no-profile-64x64.png'+')'">
             <div class="buttons">
                 <div *ngIf="false" class="delete" (click)="node.destroy()"></div>
                 <div class="toggler" (click)="node.toggle()"></div>
@@ -35,7 +38,7 @@
             <div class="tree-text tree-text-non-editable">
                 <span>{{ node.displayName }}</span>
             </div>
-            <div class="tree-text tree-text-editable">
+            <div class="tree-text">
                 <span #disaplyName [innerHtml]="node.displayName" (blur)="node.displayName=$event.srcElement.innerText"></span>
                 <span class="children-count"> ({{ node.childrenCount() }})</span>
             </div>

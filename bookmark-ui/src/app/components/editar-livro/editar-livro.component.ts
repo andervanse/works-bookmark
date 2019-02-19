@@ -17,6 +17,7 @@ export class EditarLivroComponent implements OnInit {
   usuario: Usuario;
   imagemUpload: any;
   livro: Livro;
+  titulo: string;
   @ViewChild('livroForm') livroForm: FormGroup;
 
   constructor(
@@ -35,6 +36,7 @@ export class EditarLivroComponent implements OnInit {
       const livroId = params['livro'];
 
       if (livroId !== '0') {
+        this.titulo = "Editar Livro";
         this.livroService.obterLivro(livroId).subscribe((resp) => {
           this.livro = resp;
           this.livroForm.setValue({
@@ -44,6 +46,8 @@ export class EditarLivroComponent implements OnInit {
           });
 
         });
+      } else {
+        this.titulo = "Novo Livro";
       }
     });
   }

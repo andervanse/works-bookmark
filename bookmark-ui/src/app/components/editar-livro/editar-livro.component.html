@@ -1,5 +1,5 @@
 <div class="dialog">
-  <h4 class="mdl-dialog__title">Novo Livro</h4>
+  <h4 class="mdl-dialog__title">{{ titulo }}</h4>
   <form #livroForm="ngForm" (ngSubmit)="onSubmit(livroForm)" action="#" novalidate autocomplete="off">
     <div class="mdl-dialog__content">
       <input type="hidden" ngModel name="id">
